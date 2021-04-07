@@ -1,0 +1,68 @@
+.price {
+  padding-bottom: 50px;
+  background-color: $bg-color;
+
+
+  &__container {
+    padding-top: 50px;
+  }
+
+  &__title {
+    margin-bottom: 58px;
+  }
+
+  &__table {
+    width: 100%;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+
+    @include tablet {
+      font-size: 20px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+    }
+
+    & td {
+      box-shadow: inset 0px -2px 0px #E7E7E7;
+    }
+
+    & tr {
+      background: none;
+      transition: background 0.3s ease-in-out;
+      @include desktop {
+        &:hover {
+          background: rgba(0, 137, 228, 0.1);
+          transition: background 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+
+  &__name {
+    padding: 20px 40px;
+    max-width: 911px;
+
+    @include mobile {
+      padding: 10px 20px;
+    }
+  }
+
+  &__unit {
+    text-align: center;
+    padding: 20px 0;
+
+    @include mobile {
+      padding-right: 10px;
+    }
+  }
+
+  &__cost {
+    text-align: center;
+    padding: 20px 0;
+    max-width: 279px;
+  }
+
+}

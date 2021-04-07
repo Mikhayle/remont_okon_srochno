@@ -1,0 +1,365 @@
+@import "../mixins";
+@import "../vars";
+
+.bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -2;
+  width: 100%;
+  height: 860px;
+  background-image: url('../img/background.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: rgba(21, 68, 99, 0.8);;
+  }
+}
+
+.header {
+  color: #fff;
+
+  &__upper {
+    position: relative;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+      padding-bottom: 0;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+
+  &__location {
+    margin-right: 50px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 145%;
+
+    @include tablet {
+      margin-right: 30px;
+    }
+
+    @media screen and (max-width: 830px) {
+      font-size: 16px;
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__city {
+    margin-bottom: 9px;
+    display: flex;
+
+    @include tablet {
+      margin-bottom: 5px;
+    }
+
+    &::before {
+      content: "";
+      margin-right: 9px;
+      width: 19px;
+      height: 24px;
+      background-image: url('../img/location_icon.svg');
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__place {
+    padding-left: 30px;
+    font-weight: 400;
+    font-size: 16px;
+
+    @media screen and (max-width: 830px) {
+      font-size: 14px;
+    }
+  }
+
+  &__logo {
+    margin-right: 53px;
+
+    @include tablet {
+      margin-right: 30px;
+    }
+
+    @include mobile {
+      order: -1;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__burger-wrapper {
+    position: fixed;
+    top: 50px;
+    right: 15px;
+    z-index: 21;
+  }
+
+  &__burger {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__menu {
+    border-bottom: 2px solid #fff;
+
+    @include tablet {
+      display: none;
+    }
+
+    &.is-active {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 30;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row-reverse;
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &__menu-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+
+    &.is-active {
+      transform: translateX(0%);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    @include tablet {
+      margin-bottom: 50px;
+      padding: 0;
+      width: 50%;
+      height: 100%;
+      background-color: #FEFBF6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+
+      @media screen and (orientation: landscape) {
+        flex-direction: row;
+        width: 100%;
+      }
+    }
+
+    @include mobile {
+      width: 100%;
+
+      @media screen and (orientation: landscape) {
+        flex-direction: row;
+      }
+    }
+  }
+
+  &__menu-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    @include tablet {
+      margin-bottom: 100px;
+      flex-direction: column;
+      width: auto;
+
+      @media screen and (orientation: landscape) {
+        order: 1;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__menu-item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__menu-link {
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
+
+    @include tablet {
+      color: $main;
+      font-size: 28px;
+    }
+
+    @include mobile {
+      font-size: 18px;
+    }
+  }
+
+  &__contacts {
+    & span {
+      padding-left: 30px;
+
+      @media screen and (max-width: 830px) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__phone-link {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 145%;
+    color: #fff;
+
+    @media screen and (max-width: 830px) {
+      font-size: 16px;
+    }
+
+    &::before {
+      content: "";
+      margin-right: 5px;
+      width: 19px;
+      height: 24px;
+      background-image: url('../img/phone_icon.svg');
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.menu {
+  position: relative;
+  @include tablet {
+    color: $main;
+  }
+  &__close {
+    cursor: pointer;
+    @include desktop {
+      display: none;
+    }
+
+    position: absolute;
+    top: 34px;
+    right: 24px;
+    //padding-top: 34px;
+    //padding-right: 24px;
+    //margin-bottom: 34px;
+    background: none;
+    border: none;
+  }
+
+  &__info-block {
+    text-align: center;
+
+    @include desktop {
+      display: none;
+    }
+
+    @include tablet {
+      @media screen and (orientation: landscape) {
+        margin-right: 100px;
+      }
+    }
+  }
+
+  &__location {
+    margin-bottom: 10px;
+  }
+
+  &__city {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 145%;
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  &__place {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 145%;
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  &__work-time {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 145%;
+
+    @include mobile {
+      font-size: 16px;
+    }
+
+    & span {
+      display: block;
+      margin-top: 5px;
+      font-weight: 400;
+      font-size: 16px;
+
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__phone-link {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 145%;
+    color: $main;
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  &__mail-link {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 145%;
+    color: $main;
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<div class="modal-container">
+  <section class="modal">
+    <button class="modal__close">
+      <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 2L34 34M2 34L34 2" stroke="#333554" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <div class="modal__body">
+    <h2 class="modal__title">
+      Вызвать мастера по ремонту окон
+      <span>
+        Закажите выезд онлайн и получите скидку 10%
+      </span>
+    </h2>
+    <form method="POST" action="telegram.php" class="modal__form form">
+      <label class="modal__input-label">
+        <span>
+          Ваше имя (обязательно)
+        </span>
+        <input type="text" class="modal__input" data-validate-field="name" name="name">
+      </label>
+      <label class="modal__input-label">
+        <span>
+          Ваш телефон (обязательно)
+        </span>
+        <input type="tel" class="modal__input input-tel" placeholder="+7 (___) ___-__-__" data-validate-field="tel" name="phone">
+      </label>
+      <label class="modal__input-label">
+        <span>
+          Комментарий к заявке
+        </span>
+        <textarea class="modal__input modal__input--area" data-validate-field="text" name="comments"></textarea>
+      </label>
+      <input type="submit" class="btn-primary modal__btn-send" value="Заказать звонок">
+      <div class="modal__info">
+        Воспользуйтесь формой обратной связи для вызова мастера
+      </div>
+    </form>
+  </div>
+  </section>
+</div>
+<div class="modal-container-thanks">
+  <div class="modal-thanks__content">
+    <p class="modal-thanks__text">
+      Заявка успешно отправлена
+      <span>
+        Мастер перезвонит в течении часа.
+      </span>
+    </p>
+    <button class="modal-thanks__btn">
+      Готово!
+    </button>
+  </div>
+</div>

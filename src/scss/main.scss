@@ -1,0 +1,28 @@
+// @import 'vars'; если используете scss-переменные - подключите сюда vars, но удалите root из _vars.scss
+
+// CUSTOM COMPONENTS STYLES
+// .burger {
+//   --burger-width: 40px;
+//   --burger-height: 20px;
+//   --burger-line-height: 2px;
+
+//   @include burger;
+// }
+
+@import "./components/modal";
+@import "./components/header";
+@import "./components/mosquito";
+@import "./components/hero";
+@import "./components/cards-props";
+@import "./components/services";
+@import "./components/repair";
+@import "./components/get-sale";
+@import "./components/partners";
+@import "./components/price-list";
+@import "./components/call-steps";
+@import "./components/footer";
+@import "./components/swiper";
+
+
+
+

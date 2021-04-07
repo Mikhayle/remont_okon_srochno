@@ -1,0 +1,43 @@
+.get-sale {
+
+  &__container {
+    padding: 50px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    max-width: 70%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 145%;
+
+    @include tablet {
+      font-size: 30px;
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
+      font-size: 19px;
+      text-align: center;
+    }
+
+
+  }
+
+  &__btn {
+    @include tablet {
+      width: 245px;
+    }
+
+    @include mobile {
+      width: 260px;
+    }
+  }
+}

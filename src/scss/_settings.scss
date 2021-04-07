@@ -1,0 +1,127 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--color-white);
+  color: $main;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, p {
+  padding: 0;
+  margin: 0;
+}
+
+.scroll-off {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.is-outer {
+  position: relative !important; // stylelint-disable-line declaration-no-important
+  left: -9999px !important; // stylelint-disable-line declaration-no-important
+}
+
+.site-container {
+  overflow: hidden;
+}
+
+.is-hidden {
+  display: none !important; // stylelint-disable-line declaration-no-important
+}
+
+.for-mobile {
+  display: none;
+
+  @include mobile {
+    display: block;
+  }
+}
+
+.error {
+  border: 2px #ff4019 solid !important; // stylelint-disable-line declaration-no-important
+}
+
+.btn-reset {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn-primary {
+  width: 204px;
+  height: 66px;
+  box-sizing: border-box;
+  background: #FC443A;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 145%;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+
+  @include desktop {
+    &:hover {
+      background: #fff;
+      border: 1px solid #FC443A;
+      color: #FC443A;
+      transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+    }
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1300px;
+
+  @media screen and (max-width: 1450px) {
+    max-width: 1100px;
+    padding: 0 15px;
+  }
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 125%;
+  color: $main;
+  text-align: center;
+
+  @include tablet {
+    font-size: 28px;
+    line-height: 125%;
+  }
+
+}
+
+

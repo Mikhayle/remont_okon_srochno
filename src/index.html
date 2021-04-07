@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ремонт окон в Санкт-Петербурге и Ленинградской области, срочный ремонт окон, выезд мастера по ремонту окон" />
+  <meta name="google-site-verification" content="Ehat-dFf-EO_NvjqVn3VLjc7gswl1HC3qKehujZJr_A" />
+  <meta name="yandex-verification" content="4e61d46df33be615" />
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#111111">
+  <title>Ремонт окон срочно</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/vendor.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="site-container">
+    @include('partials/modal.html')
+		@include('partials/header.html')
+		<main class="main">
+      @include('partials/hero.html')
+      @include('partials/cards-props.html')
+      @include('partials/services.html')
+      @include('partials/mosquito.html')
+      @include('partials/repair.html')
+      @include('partials/get-sale.html')
+      @include('partials/partners.html')
+      @include('partials/price-list.html')
+      @include('partials/call-steps.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+  <script src="js/vendor.js"></script>
+	<script src="js/main.js"></script>
+  <script>
+    const swiper1 = new Swiper('.swiper-container--1', {
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      spaceBetween: 80,
+      loop: true,
+      autoplay: true,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination--1',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next--1',
+        prevEl: '.swiper-button-prev--1',
+      },
+    });
+
+    const swiper2 = new Swiper('.swiper-container--2', {
+      // Optional parameters
+      loop: true,
+      spaceBetween: 20,
+      autoplay: true,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination--2',
+        type: 'fraction',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next--2',
+        prevEl: '.swiper-button-prev--2',
+      },
+    });
+
+  </script>
+</body>
+</html>

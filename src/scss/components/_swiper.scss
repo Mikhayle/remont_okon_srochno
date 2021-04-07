@@ -1,0 +1,77 @@
+.swiper-container {
+  overflow-y: hidden;
+}
+
+.swiper-container-1,
+.swiper-container-2 {
+  overflow-x: hidden;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 20px;
+  height: 35px;
+  border: none;
+  background-color: transparent;
+  background-image: url('../img/arrow.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &::after {
+    content: '';
+  }
+}
+
+.swiper-button-next {
+  right: -60px;
+  transform: rotate(180deg);
+}
+
+.swiper-button-prev {
+ left: -60px;
+}
+
+.swiper-button-next--white {
+  background-image: url('../img/arrow_white.svg');
+
+  @media screen and (max-width: 1230px) {
+    right: 8px;
+    background-image: url('../img/arrow.svg');
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.swiper-button-prev--white {
+  background-image: url('../img/arrow_white.svg');
+
+  @media screen and (max-width: 1230px) {
+    left: 8px;
+    background-image: url('../img/arrow.svg');
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.swiper-pagination-fraction {
+  bottom: 55px !important;
+  left: -250px !important;
+  z-index: 0;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 145%;
+  color: #0089E4;
+
+  @include mobile {
+    bottom: 15px !important;
+    left: 0 !important;
+  }
+}
+
+.swiper-pagination-total {
+  font-size: 25px;
+}

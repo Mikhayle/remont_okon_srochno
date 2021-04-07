@@ -1,0 +1,115 @@
+@import '../vars';
+@import "../mixins";
+
+@include rotate-card;
+
+.cards-props {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: $bg-color;
+
+  @include tablet {
+    padding-top: 70px;
+  }
+
+  @include mobile {
+    padding-top: 30px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    @media screen and (max-width: 860px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    width: 23%;
+    height: 500px;
+    color: $main;
+
+    @media screen and (max-width: 1450px) {
+      height: auto;
+      min-height: 221px;
+    }
+
+    @media screen and (max-width: 860px) {
+      flex: 1 1 40%;
+      max-width: 40%;
+
+      &:nth-child(1) {
+        margin-right: 30px;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 30px;
+      }
+
+      &:nth-child(1) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and (max-width: 600px){
+      max-width: 100%;
+      width: 100%;
+      flex: auto;
+
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 145%;
+
+    @media screen and (max-width: 1450px) {
+      font-size: 21px;
+    }
+
+    @media screen and (max-width: 930px) {
+      font-size: 18px;
+    }
+  }
+
+  &__text {
+    padding: 0 40px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 145%;
+
+    @media screen and (max-width: 1450px) {
+      padding: 0 25px;
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: 930px) {
+      font-size: 14px;
+    }
+  }
+}
+
+

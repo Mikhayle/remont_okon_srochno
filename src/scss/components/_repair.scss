@@ -1,0 +1,82 @@
+.repair {
+  padding: 100px 0;
+  background-color: $bg-color;
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__block-info {
+    flex: 0 0 48%;
+    max-width: 48%;
+    min-height: 288px;
+    height: auto;
+
+    @include mobile {
+      flex: none;
+      max-width: none;
+
+
+      &:first-child {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__side {
+    padding: 20px;
+    min-height: 288px;
+    height: auto;
+
+    &_front {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: none;
+
+      &--plastic {
+        background-image: url('../img/repair/plastic.png');
+      }
+
+      &--alum {
+        background-image: url('../img/repair/alum.png');
+      }
+    }
+  }
+
+  &__block-title {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 145%;
+
+    @include tablet {
+      font-size: 21px;
+    }
+
+    @include mobile {
+      font-size: 18px;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 145%;
+
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+}
